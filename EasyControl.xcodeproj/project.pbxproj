@@ -1,0 +1,393 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7961037BBB53FF75C57B580C /* Pods_EasyControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3254ACEECE221FEA12AD10D4 /* Pods_EasyControl.framework */; };
+		D9F2FB2D1ED58D8D0064E62F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F2FB2C1ED58D8D0064E62F /* AppDelegate.swift */; };
+		D9F2FB2F1ED58D8D0064E62F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F2FB2E1ED58D8D0064E62F /* ViewController.swift */; };
+		D9F2FB321ED58D8D0064E62F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9F2FB301ED58D8D0064E62F /* Main.storyboard */; };
+		D9F2FB341ED58D8D0064E62F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F2FB331ED58D8D0064E62F /* Assets.xcassets */; };
+		D9F2FB371ED58D8D0064E62F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9F2FB351ED58D8D0064E62F /* LaunchScreen.storyboard */; };
+		D9F2FB3F1ED590940064E62F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F2FB3E1ED590940064E62F /* SettingsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		217398E866AB427F452509CC /* Pods-EasyControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyControl.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyControl/Pods-EasyControl.release.xcconfig"; sourceTree = "<group>"; };
+		3254ACEECE221FEA12AD10D4 /* Pods_EasyControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C6827971248F3E5FC217D35 /* Pods-EasyControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyControl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyControl/Pods-EasyControl.debug.xcconfig"; sourceTree = "<group>"; };
+		D9F2FB291ED58D8D0064E62F /* EasyControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9F2FB2C1ED58D8D0064E62F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D9F2FB2E1ED58D8D0064E62F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D9F2FB311ED58D8D0064E62F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D9F2FB331ED58D8D0064E62F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D9F2FB361ED58D8D0064E62F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D9F2FB381ED58D8D0064E62F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9F2FB3E1ED590940064E62F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D9F2FB261ED58D8D0064E62F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7961037BBB53FF75C57B580C /* Pods_EasyControl.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7E5CD3BA950A1F27628BEA59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3254ACEECE221FEA12AD10D4 /* Pods_EasyControl.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A2BD6EDBD17B9ED26697CF24 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8C6827971248F3E5FC217D35 /* Pods-EasyControl.debug.xcconfig */,
+				217398E866AB427F452509CC /* Pods-EasyControl.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D9F2FB201ED58D8D0064E62F = {
+			isa = PBXGroup;
+			children = (
+				D9F2FB2B1ED58D8D0064E62F /* EasyControl */,
+				D9F2FB2A1ED58D8D0064E62F /* Products */,
+				A2BD6EDBD17B9ED26697CF24 /* Pods */,
+				7E5CD3BA950A1F27628BEA59 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D9F2FB2A1ED58D8D0064E62F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9F2FB291ED58D8D0064E62F /* EasyControl.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D9F2FB2B1ED58D8D0064E62F /* EasyControl */ = {
+			isa = PBXGroup;
+			children = (
+				D9F2FB2C1ED58D8D0064E62F /* AppDelegate.swift */,
+				D9F2FB2E1ED58D8D0064E62F /* ViewController.swift */,
+				D9F2FB301ED58D8D0064E62F /* Main.storyboard */,
+				D9F2FB331ED58D8D0064E62F /* Assets.xcassets */,
+				D9F2FB351ED58D8D0064E62F /* LaunchScreen.storyboard */,
+				D9F2FB381ED58D8D0064E62F /* Info.plist */,
+				D9F2FB3E1ED590940064E62F /* SettingsViewController.swift */,
+			);
+			path = EasyControl;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D9F2FB281ED58D8D0064E62F /* EasyControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9F2FB3B1ED58D8D0064E62F /* Build configuration list for PBXNativeTarget "EasyControl" */;
+			buildPhases = (
+				0913CA545D0C1B042BB8096C /* [CP] Check Pods Manifest.lock */,
+				D9F2FB251ED58D8D0064E62F /* Sources */,
+				D9F2FB261ED58D8D0064E62F /* Frameworks */,
+				D9F2FB271ED58D8D0064E62F /* Resources */,
+				4D02E6EB40BD7D49AAF89AB2 /* [CP] Embed Pods Frameworks */,
+				65EEF37F872BF65D022E30C1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyControl;
+			productName = EasyControl;
+			productReference = D9F2FB291ED58D8D0064E62F /* EasyControl.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D9F2FB211ED58D8D0064E62F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Krasimir Kazakov";
+				TargetAttributes = {
+					D9F2FB281ED58D8D0064E62F = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = B92QWSNZ58;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D9F2FB241ED58D8D0064E62F /* Build configuration list for PBXProject "EasyControl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D9F2FB201ED58D8D0064E62F;
+			productRefGroup = D9F2FB2A1ED58D8D0064E62F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D9F2FB281ED58D8D0064E62F /* EasyControl */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D9F2FB271ED58D8D0064E62F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9F2FB371ED58D8D0064E62F /* LaunchScreen.storyboard in Resources */,
+				D9F2FB341ED58D8D0064E62F /* Assets.xcassets in Resources */,
+				D9F2FB321ED58D8D0064E62F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0913CA545D0C1B042BB8096C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4D02E6EB40BD7D49AAF89AB2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyControl/Pods-EasyControl-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65EEF37F872BF65D022E30C1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyControl/Pods-EasyControl-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D9F2FB251ED58D8D0064E62F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9F2FB2F1ED58D8D0064E62F /* ViewController.swift in Sources */,
+				D9F2FB2D1ED58D8D0064E62F /* AppDelegate.swift in Sources */,
+				D9F2FB3F1ED590940064E62F /* SettingsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D9F2FB301ED58D8D0064E62F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9F2FB311ED58D8D0064E62F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D9F2FB351ED58D8D0064E62F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9F2FB361ED58D8D0064E62F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D9F2FB391ED58D8D0064E62F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D9F2FB3A1ED58D8D0064E62F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D9F2FB3C1ED58D8D0064E62F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C6827971248F3E5FC217D35 /* Pods-EasyControl.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B92QWSNZ58;
+				INFOPLIST_FILE = EasyControl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wasp.EasyControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D9F2FB3D1ED58D8D0064E62F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 217398E866AB427F452509CC /* Pods-EasyControl.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B92QWSNZ58;
+				INFOPLIST_FILE = EasyControl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wasp.EasyControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D9F2FB241ED58D8D0064E62F /* Build configuration list for PBXProject "EasyControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9F2FB391ED58D8D0064E62F /* Debug */,
+				D9F2FB3A1ED58D8D0064E62F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9F2FB3B1ED58D8D0064E62F /* Build configuration list for PBXNativeTarget "EasyControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9F2FB3C1ED58D8D0064E62F /* Debug */,
+				D9F2FB3D1ED58D8D0064E62F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D9F2FB211ED58D8D0064E62F /* Project object */;
+}
