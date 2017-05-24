@@ -17,7 +17,7 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Settings"
+        navigationItem.title = "Настройки"
 
         txtIP.text = ViewController.getIPAddress()
     }

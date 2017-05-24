@@ -90,25 +90,25 @@ class ViewController: UIViewController {
         case .loading:
             btnOnOff.layer.borderColor = loadingStateColor.cgColor
             btnOnOff.setTitleColor(loadingStateColor, for: .normal)
-            btnOnOff.setTitle("Connecting ...", for: .normal)
+            btnOnOff.setTitle("Свързване...", for: .normal)
             break
             
         case .failed:
             btnOnOff.layer.borderColor = failedStateColor.cgColor
             btnOnOff.setTitleColor(failedStateColor, for: .normal)
-            btnOnOff.setTitle("Failed", for: .normal)
+            btnOnOff.setTitle("Грешка", for: .normal)
             break
             
         case .on:
             btnOnOff.layer.borderColor = onStateColor.cgColor
             btnOnOff.setTitleColor(onStateColor, for: .normal)
-            btnOnOff.setTitle("On", for: .normal)
+            btnOnOff.setTitle("Включен", for: .normal)
             break
             
         case .off:
             btnOnOff.layer.borderColor = offStateColor.cgColor
             btnOnOff.setTitleColor(offStateColor, for: .normal)
-            btnOnOff.setTitle("Off", for: .normal)
+            btnOnOff.setTitle("Изключен", for: .normal)
             break
             
         case .changing:
