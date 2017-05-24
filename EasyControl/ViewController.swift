@@ -166,7 +166,7 @@ class ViewController: UIViewController {
 
         let ev: String = isOn ? "TurnOn" : "TurnOff"
 
-        Alamofire.request("http://" + controllerIP! + "/control?cmd=event," + ev).responseString { response in
+        manager.request("http://" + controllerIP! + "/control?cmd=event," + ev).responseString { response in
             
             print("Success: \(response.result.isSuccess)")
             
