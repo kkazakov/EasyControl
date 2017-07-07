@@ -11,6 +11,15 @@ import SwiftyJSON
 import Alamofire
 
 
+extension Request {
+    public func debugLog() -> Self {
+        #if DEBUG
+            debugPrint(self)
+        #endif
+        return self
+    }
+}
+
 class ViewController: UIViewController {
     
     @IBOutlet var btnSetIP: UIButton!
@@ -128,7 +137,9 @@ class ViewController: UIViewController {
         
         updateInterface(.loading)
         
-        manager.request("http://" + controllerIP! + "/control?cmd=status,gpio,12").responseJSON { response in
+        manager.request("http://" + controllerIP! + "/control?cmd=status,gpio,12")
+            //.debugLog()
+            .responseJSON { response in
             print(response.request ?? "")  // original URL request
             print(response.response ?? "") // HTTP URL response
             print(response.data ?? "")     // server data
