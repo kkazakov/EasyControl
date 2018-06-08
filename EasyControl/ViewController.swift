@@ -25,10 +25,13 @@ class ViewController: UIViewController {
     @IBOutlet var btnSetIP: UIButton!
     @IBOutlet var btnOnOff: UIButton!
     
+    @IBOutlet weak var lblPower: UILabel!
+    
     static let defaults = UserDefaults.standard
     
     static let CONTROLLER_IP_VAR = "controller_ip"
-    
+    static let CONTROLLER_KEY_VAR = "controller_key"
+
     var controllerIP: String?
     
     let unknownStateColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.2)
@@ -65,6 +68,7 @@ class ViewController: UIViewController {
         //btnSetIP.layer.borderWidth = 1
         btnSetIP.setTitleColor(loadingStateColor, for: .normal)
 
+        Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(self.getControllerState), userInfo: nil, repeats: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -80,6 +84,23 @@ class ViewController: UIViewController {
             getControllerState()
         }
         
+    }
+    
+    func updatePower(_ power: String?) {
+        if power == nil {
+            lblPower.text = "0 kW"
+        } else {
+            
+            if var powerConsumption = Double(power!) {
+                powerConsumption = powerConsumption / 1000
+                powerConsumption = Double(round(1000 * powerConsumption)/1000)
+
+                lblPower.text = "\(powerConsumption) kW"
+            } else {
+                lblPower.text = "0 kW"
+            }
+            
+        }
     }
     
     func updateInterface(_ newState: State?) {
@@ -128,6 +149,32 @@ class ViewController: UIViewController {
         
     }
     
+    func getPowerConsumption() {
+        
+        guard controllerIP != nil else {
+            return
+        }
+        
+        
+        manager.request("http://" + controllerIP! + "/api/apparent?apikey=" + ViewController.getKey()!)
+            //.debugLog()
+            .responseString { response in
+                
+                if let data = response.data {
+                    
+                    
+                    let str = String(data: data, encoding: .utf8)
+                    
+                    if (str != nil) {
+                        
+                        
+                        
+                        self.updatePower(str)
+                    }
+                    
+                }
+        }
+    }
     
     func getControllerState() {
         
@@ -137,37 +184,35 @@ class ViewController: UIViewController {
         
         updateInterface(.loading)
         
-        manager.request("http://" + controllerIP! + "/control?cmd=status,gpio,12")
+        manager.request("http://" + controllerIP! + "/api/relay/0?apikey=" + ViewController.getKey()!)
             //.debugLog()
-            .responseJSON { response in
-            print(response.request ?? "")  // original URL request
-            print(response.response ?? "") // HTTP URL response
-            print(response.data ?? "")     // server data
-            print(response.result)   // result of response serialization
+            .responseString { response in
 
             if let data = response.data {
                 
-                let json = JSON(data: data)
                 
-                //print("JSON: \(json)")
-                
-                //let str = String(data: json, encoding: .utf8)
-                
-                if json["state"] != JSON.null {
+                let str = String(data: data, encoding: .utf8)
+
+                if (str != nil) {
                     
-                    if json["state"] == 1 {
+                    if str == "1" {
                         self.updateInterface(.on)
-                    } else {
+                    } else if str == "0" {
                         self.updateInterface(.off)
+                    } else {
+                        self.updateInterface(.failed)
                     }
                     
                 } else {
                     self.updateInterface(.failed)
                 }
+
             } else {
                 self.updateInterface(.failed)
             }
         }
+        
+        getPowerConsumption()
     }
     
     
@@ -175,9 +220,11 @@ class ViewController: UIViewController {
         
         updateInterface(.changing)
 
-        let ev: String = isOn ? "TurnOn" : "TurnOff"
+        let ev: String = isOn ? "1" : "0"
+        
+        //url +  "/api/" + target + "?" + getKey() + "&value=" + (turnOn ? "1" : "0")
 
-        manager.request("http://" + controllerIP! + "/control?cmd=event," + ev).responseString { response in
+        manager.request("http://" + controllerIP! + "/api/relay/0?apikey=" + ViewController.getKey()! + "&value=" + ev).responseString { response in
             
             print("Success: \(response.result.isSuccess)")
             
@@ -187,8 +234,11 @@ class ViewController: UIViewController {
             }
             
             if let val = response.result.value {
-                if val == "OK" {
-                    self.updateInterface(isOn ? .on : .off)
+                if val == "0" || val == "1" {
+                    self.updateInterface(val == "1" ? .on : .off)
+                    
+                    self.getPowerConsumption()
+
                 } else {
                     self.updateInterface(.failed)
                 }
@@ -226,6 +276,15 @@ class ViewController: UIViewController {
     
     static func setIPAddress(ip: String?) {
         defaults.set(ip, forKey: CONTROLLER_IP_VAR)
+    }
+    
+    
+    static func getKey() -> String? {
+        return defaults.string(forKey: CONTROLLER_KEY_VAR)
+    }
+    
+    static func setKey(key: String?) {
+        defaults.set(key, forKey: CONTROLLER_KEY_VAR)
     }
 
 }
